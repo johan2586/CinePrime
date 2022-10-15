@@ -1,4 +1,14 @@
-/.idea/
+#Archivos compilados
+*.class
+/build/
 /negocio/build/
-*class
+
+#Archivos temporales de Maven
+/**/targets/
+
+#Archivos de Intellij
+/.idea/
+*.inl
+
+#Carpeta Gradel
 /.gradle/

@@ -17,7 +17,7 @@ public class Funcion implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer codigo;
-
+/*
     @ManyToOne
     @JoinColumn(nullable = false)
     private Sala sala;
@@ -29,10 +29,15 @@ public class Funcion implements Serializable {
     @ManyToOne
     @JoinColumn(nullable = false)
     private Pelicula pelicula;
-
+*/
     @OneToMany(mappedBy = "funcion")
     private List<Compra> compras;
 
+    public Funcion(Integer codigo, List<Compra> compras) {
+        this.codigo = codigo;
+        this.compras = compras;
+    }
+    /*
     @Builder
 
     public Funcion(Sala sala, Horario horario, Pelicula pelicula) {
@@ -40,4 +45,6 @@ public class Funcion implements Serializable {
         this.horario = horario;
         this.pelicula = pelicula;
     }
+    */
+
 }

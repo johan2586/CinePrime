@@ -9,6 +9,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 
 @Entity
@@ -35,5 +36,16 @@ public class AdministradorTeatro implements Serializable {
     @OneToMany
     private List<Teatro> teatros;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AdministradorTeatro that = (AdministradorTeatro) o;
+        return codigo.equals(that.codigo);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(codigo);
+    }
 }

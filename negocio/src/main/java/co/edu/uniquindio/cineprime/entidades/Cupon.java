@@ -34,14 +34,14 @@ public class Cupon implements Serializable {
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private Cliente cliente;
+    private Usuario usuario;
 
     @Builder
 
-    public Cupon(Float descuento, LocalDateTime fechaVEncimiento, Boolean estado, Cliente cliente) {
+    public Cupon(Float descuento, LocalDateTime fechaVEncimiento, Boolean estado, Usuario usuario) {
         this.descuento = descuento;
         this.fechaVEncimiento = fechaVEncimiento;
         this.estado = estado;
-        this.cliente = cliente;
+        this.usuario = usuario;
     }
 }

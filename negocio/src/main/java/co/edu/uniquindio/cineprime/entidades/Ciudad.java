@@ -21,10 +21,10 @@ public class Ciudad implements Serializable {
 
     @Column(nullable = false, length = 100)
     private String nombre;
-
+/*
     @OneToMany(mappedBy = "ciudad")
     private List<Teatro> teatros;
-
+*/
     @Builder
     public Ciudad(String nombre){
         this.nombre = nombre;
