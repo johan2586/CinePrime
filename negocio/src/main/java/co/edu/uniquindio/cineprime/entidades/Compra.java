@@ -50,7 +50,7 @@ public class Compra implements Serializable {
 
     @ManyToMany
     @JoinColumn(name = "entrada" ,
-            joinColumns = @JoinColumn(name = "compra_codigo") ,
+            joinColumns = @JoinColumn(name = "compra_codigo"),
             inverseJoinColumns = @JoinColumn(name = "silla_sala_codigo")
     )
     private List<SillaSala> sillaSala;
